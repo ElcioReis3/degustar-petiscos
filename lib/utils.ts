@@ -19,11 +19,10 @@ export const cartTotal = (cart: CartItem[]): number =>
 
 /** Monta mensagem formatada para WhatsApp */
 export const buildWhatsAppMessage = (cart: CartItem[]): string => {
-  let msg = `🛒 *Pedido - ${CONFIG.STORE_NAME}*\n\n`;
+  let msg = `🛒 *Pedido - ${CONFIG.STORE_NAME}*\n`;
   cart.forEach((i) => {
-    msg += `• ${i.qty}x ${i.name} — ${fmt(i.price * i.qty)}\n`;
+    msg += `• ${i.qty}x ${i.name} — ${fmt(i.price)}\n`;
   });
-  msg += `\n💰 *Total: ${fmt(cartTotal(cart))}*`;
   return encodeURIComponent(msg);
 };
 
