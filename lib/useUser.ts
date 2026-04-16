@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import type { User } from "@/types";
-import { storage } from "@/lib/utils";
+import { storage } from "@/lib/storage";
 
 export function useUser() {
   const [user, setUser] = useState<User | null>(null);
