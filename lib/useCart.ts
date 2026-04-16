@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import type { CartItem, Product } from "@/types";
-import { storage } from "@/lib/utils";
+import { storage } from "@/lib/storage";
 
 export function useCart() {
   const [cart, setCart] = useState<CartItem[]>([]);
@@ -22,7 +22,7 @@ export function useCart() {
       const exists = prev.find((i) => i.id === product.id);
       if (exists) {
         return prev.map((i) =>
-          i.id === product.id ? { ...i, qty: i.qty + 1 } : i
+          i.id === product.id ? { ...i, qty: i.qty + 1 } : i,
         );
       }
       return [...prev, { ...product, qty: 1 }];
@@ -33,9 +33,7 @@ export function useCart() {
     if (qty <= 0) {
       setCart((prev) => prev.filter((i) => i.id !== id));
     } else {
-      setCart((prev) =>
-        prev.map((i) => (i.id === id ? { ...i, qty } : i))
-      );
+      setCart((prev) => prev.map((i) => (i.id === id ? { ...i, qty } : i)));
     }
   }, []);
 
