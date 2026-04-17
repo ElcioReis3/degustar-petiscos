@@ -10,8 +10,8 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Sabor & Arte — Delivery & Catálogo",
-  description: "O melhor sabor da cidade. Peça online ou via WhatsApp.",
+  title: "Degustar Petiscos — Delivery & Catálogo",
+  description: "O melhor petisco da cidade. Faça sua reserva agora mesmo.",
 };
 
 export default function RootLayout({
