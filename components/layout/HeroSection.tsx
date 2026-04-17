@@ -5,7 +5,7 @@ import { Zap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const STATS: [string, string][] = [
-  ["4.9★", "Avaliação"],
+  ["5,0★", "Avaliação"],
   ["2.1k+", "Pedidos"],
   ["30min", "Entrega"],
   ["100%", "Garantido"],

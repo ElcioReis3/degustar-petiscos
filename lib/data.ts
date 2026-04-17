@@ -10,10 +10,8 @@ export const CONFIG = {
 
 export const CATEGORIES: Category[] = [
   { id: "todos", label: "Todos", icon: "🍽️" },
-  { id: "lancamentos", label: "Lançamentos", icon: "🔥" },
   { id: "petiscos", label: "Petiscos", icon: "🍢" },
   { id: "bebidas", label: "Bebidas", icon: "🥤" },
-  { id: "sobremesas", label: "Sobremesas", icon: "🍰" },
 ];
 
 export const PRODUCTS: Product[] = [

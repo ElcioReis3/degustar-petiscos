@@ -22,7 +22,10 @@ export function CategoryBar({
     >
       <div className="max-w-6xl mx-auto px-4">
         <ScrollArea className="w-full">
-          <div className="flex gap-2 py-3 w-max" role="tablist">
+          <div
+            className="flex gap-2 py-3 overflow-x-auto no-scrollba flex-wrap"
+            role="tablist"
+          >
             {categories.map((cat) => {
               const isActive = active === cat.id;
               return (
@@ -32,7 +35,7 @@ export function CategoryBar({
                   aria-selected={isActive}
                   onClick={() => onChange(cat.id)}
                   className={cn(
-                    "flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all border",
+                    "flex-shrink-0 flex items-center gap-1.5 px-3 py-2 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap transition-all border",
                     isActive
                       ? "bg-orange-500 text-white border-orange-500"
                       : "border-border/40 text-muted-foreground hover:border-border hover:text-foreground",
