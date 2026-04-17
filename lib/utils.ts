@@ -21,7 +21,7 @@ export const cartTotal = (cart: CartItem[]): number =>
 export const buildWhatsAppMessage = (cart: CartItem[]): string => {
   let msg = `🛒 *Pedido - ${CONFIG.STORE_NAME}*\n`;
   cart.forEach((i) => {
-    msg += `• ${i.qty}x ${i.name} — ${fmt(i.price)}\n`;
+    msg += `• ${i.qty}x ${i.name}\n`;
   });
   return encodeURIComponent(msg);
 };
