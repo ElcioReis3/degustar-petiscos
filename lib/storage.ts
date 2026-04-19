@@ -1,7 +1,3 @@
-/**
- * Wrapper seguro para localStorage.
- * Só funciona no cliente — nunca importe em Server Components.
- */
 export const storage = {
   get<T>(key: string, fallback: T): T {
     if (typeof window === "undefined") return fallback;

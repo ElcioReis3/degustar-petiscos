@@ -18,7 +18,6 @@ export function ProductGrid({
   if (products.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-24 text-muted-foreground gap-3">
-        <span className="text-5xl" aria-hidden>😕</span>
         <p className="font-semibold">Nenhum item encontrado</p>
         <p className="text-sm">Tente outro termo ou categoria</p>
       </div>
@@ -30,7 +29,9 @@ export function ProductGrid({
       {searchQuery && (
         <p className="text-sm text-muted-foreground mb-4">
           {products.length} resultado{products.length !== 1 ? "s" : ""} para{" "}
-          <strong className="text-foreground">&ldquo;{searchQuery}&rdquo;</strong>
+          <strong className="text-foreground">
+            &ldquo;{searchQuery}&rdquo;
+          </strong>
         </p>
       )}
 

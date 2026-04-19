@@ -131,8 +131,8 @@ export function CatalogShell() {
           )}
         />
         <div className="h-16" />
-        <Footer />
       </main>
+      <Footer />
 
       {/* Modais e drawer */}
       <CartSheet
